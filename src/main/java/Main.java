@@ -1,16 +1,43 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+      // Napisz program, który sprawdza czy dane słowo jest palindromem.
 
-// import org.junit.jupiter.api.Test;
+      import java.util.Scanner;
 
-public class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello world!");
-  }
+      public class Main {
+        public static void main(String[] args) {
+          System.out.println("Podaj słowo które chcesz sprawdzic: ");
+          Scanner scanner=new Scanner(System.in);
+          String slowo = scanner.nextLine();
 
-  // @Test
-  // void addition() {
-  //     assertEquals(2, 1 + 1);
-  // }
-}
-test 19.06.2024
-  
+          int lewa=0;
+          int prawa=slowo.length()-1;
+
+          
+          while(lewa<prawa)
+            {
+              if(slowo.charAt(lewa)!=slowo.charAt(prawa))
+            {
+              System.out.println("Podane słowo nie jest palindromem");
+              break;
+            
+            }
+
+            else 
+                  {
+                  lewa++;
+                  prawa--;
+                  
+                  }
+            
+                
+            }System.out.println("Podane słowo jest palindromem");
+            
+              
+            
+               
+            }
+          }
+            
+
+          
+
+         
